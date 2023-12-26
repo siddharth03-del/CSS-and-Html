@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com">
+   
+    </script>
+    <style>
+        :root{
+            min-width: 1000px;
+        }
+        .body{
+            color: #4a4a4a;
+            height: 100%;
+            overflow-y: scroll;
+            word-break: break-word;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-weight: 400;
+            min-width: 1000px;
+            margin: 0;
+            display: block;
+
+        }
+        .svg-configration{
+            height: 25px;
+            width: 25px;
+            stroke: black;
+        }
+        .inline{
+            display: inline;
+        }
+        .margin-0{
+            margin-block-end: 0px;
+            margin-block-start: 0px;
+        }
+        .flex{
+            display: flex;
+            /* justify-content: space-between; */
+        }
+        .black-white{
+            filter: grayscale(1);
+        }
+        .icon_dimensions{
+            height: 25px;
+            width: 100px;
+        }
+        .sticky-icon-pad{
+            width: 100vw;
+            height: 100px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .flex-main-content{
+            width: 45vw;
+            height: 100px;
+            /* justify-content: space-between; */
+        }
+        .icon-height{
+            width: 30vw;
+        }
+        .flex-end{
+            margin-left: auto;
+        }
+        .background_image_container{
+            width: 100vw;
+            height: 75vh;
+            background-position: center 100px;
+            background-repeat: no-repeat;
+            background: url(HeroImage.png);
+            position: relative;
+            
+
+        }
+        .justify-content-center{
+            justify-content: center;
+        }
+        .border-rounded{
+            border-bottom-left-radius: 32px;
+            border-bottom-right-radius: 32px;
+            border-top-left-radius: 32px;
+            border-top-right-radius: 32px;
+            width: 75vw;
+            height: 18vh;
+
+        }
+        .flex-row{
+            flex-direction: row;
+        }
+        .flex-column{
+            flex-direction: column;
+        }
+        .align-content-center{
+            align-content: center;
+        }
+        .height-18vh{
+            height: 18vh;
+        }
+        .rounded-r-4xl{
+            border-top-right-radius: 30px; 
+            border-bottom-right-radius: 30px; 
+        }
+        .width-100{
+            width: 27%;
+        
+        }
+        .rounded-l-4xl{
+            border-top-left-radius: 30px; 
+            border-bottom-left-radius: 30px; 
+        }
+        .line {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 1px;
+            height: 100%;
+            background-color: black;
+            transform: translate(-50%, -50%);
+        }
+        .w-80vw{
+            width: 500px;
+        }
+        .h-25vh{
+            height: fit-content;
+        }
+        .overflow-hidden{
+            overflow: hidden;
+            /* overflow-y: scroll; */
+        }
+        .root-configration{
+            width: 725px;
+           
+        }
+        /* .hello{
+            height: 1000px;
+        } */
+        html, body {
+            
+        }
+        body {
+            overflow-x: hidden;
+            position: relative;
+        }
+        .set-height{
+            height: 1000px;
+        }
+        .overflow-hidden{
+            
+        }
+        .customize-viewall{
+            width: 100px;
+            height: 40px;
+            border-width: 1px;
+            border-color: black;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+            color: blue;
+            font-weight: 500;
+            font-size: 16px;
+
+        }
+        .offer-wrapper{
+            width: 80vw;
+            height: 350px;
+            border-width: 1px;
+            border-color: black;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+            margin-left: 100px;
+            
+            bottom: -151px;
+            z-index: 10;
+            position: ;
+            bottom: 10%;
+            transform: translateY(%)
+            
+        }
+        .offer-wrapper-header{
+            padding-top: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .offer-div-dimensions{
+            width: 500px;
+            height: 167px;
+        }
+        .offer-image-dimensions{
+            width: 4.5rem;
+            height: 4.5rem;
+            border-radius: 2.5rem;
+        }
+        img{
+            overflow-clip-margin: content-box;
+            overflow: clip;
+        }
+        .bus-customization{
+            max-height: fit-content;
+            max-width: 45px;
+            border-width: 0px;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(5px);
+            text-align: center;
+        }
+        .first-customization{
+            border-style: dotted;
+            border-width: 1px;
+            border-radius: 4px;
+            height: fit-content;
+            width: 60px;
+            border-color: azure;
+            text-align: center;
+
+        }
+        .overflow-x-scroll{
+            overflow-x: scroll;
+
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            cursor: pointer;
+        }
+        .flex-column{
+            flex-direction: column;
+        }
+        .border-bottom{
+            border-bottom: solid black;
+            border-bottom-width: 2px;
+        }
+        .border-right{
+            border-right: solid black;
+            border-right-width: 2px;
+        }
+        .appInstallbg{
+            background: url(appInstallbg.svg);
+            background-repeat: no-repeat;
+            background-size: 100% 100% auto;
+            background-position: right center;
+            box-sizing: border-box;
+            
+        }
+        .h-418px{
+            height: 420px;
+        }
+        .w-1000px{
+            width: 1100px;
+        }
+        .rounded-4xl{
+            border-radius: 40px;
+        }
+        .input_form{
+            height: 60px;
+            width: 300px;
+            background-color: white;
+            border-radius: 16px;
+        }
+        #whatsapp_no:focus{
+            outline: none;
+
+        }
+        #whatsapp_no{
+            width: 130px
+        }
+        #whatsapp_no::placeholder{
+            color: grey;
+            font-size: medium;
+            font-weight: 400;
+        }
+        .get_link{
+            background-color: black;
+            
+            height: 60px;
+            width: 100px;
+            border-top-right-radius: 16px;
+            border-bottom-right-radius: 16px;
+            margin-left: 13px;   
+        }
+        .primobanner{
+            background-image: linear-gradient(to right, rgb(38,72,153), rgb(125,70,134));
+            height: 180px;
+            width: 400px;
+            border-radius: 25px;
+        }
+        .border-b-red{
+            border-bottom-color: red;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="flex sticky-icon-pad pt-9 bg-white justify-between">
+        <div class="mx-16 inline">
+            <img src="https://st.redbus.in/Images/rdc/rdc-redbus-logo.svg" alt="red_bus_image" class="h-10 w-16"></img>
+        </div>  
+        <div class="flex flex-row">
+            <div class=" inline icon-dimensions">
+                <img src="https://st.redbus.in/web/images/layout/rb_vertical.svg" alt="red_bus_tickets_icon" class=" black-white icon-dimensions">
+                <h4 class="text-center inline">Bus tickets</h4>
+            </div>
+            
+            <div class="inline icon-dimensions">
+                <img src="https://st.redbus.in/web/images/layout/ryde_vertical.svg" alt="cab_rental" class="icon_dimensions black-white">
+                <h4 class="text-center">
+                    Cab Rental
+                </h4>
+            </div>
+            <div class="inline icon-dimensions">
+                <img src="	https://st.redbus.in/web/images/layout/rail_vertical.svg" alt="train_tickets_icon" class="icon-dimensions black-white">
+                <h4 class="text-center">Train Tickets</h4>
+            </div>
+        </div>    
+        <div class="flex flex-end mr-7">
+            <div class="inline">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="svg-configration stroke-black my-0.5 mx-0.5 mr-3 hover:stroke-none">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
+                </svg> 
+            </div>
+            <div class="inline">
+                <h3 class="margin-0 inline mr-10">Help</h3> 
+            </div>
+            <div class="inline">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="svg-configration stroke-black mr-3 ">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>   
+            </div>
+            <div class="inline">
+                <h5 class="margin-0 inline mr-10">Account</h5>  
+            </div>
+        </div>
+    </div>
+    <div class="background_image_container flex flex-column align-content-center flex-wrap">
+        <div class="inline mt-20 w-max ml-32 ">
+            <h1 class="inline text-white text-3xl font-bold">India's No. 1 Online Bus Ticket Booking Site</h1>
+        </div>
+        <div class="border-rounded flex flex-row  bg-white mt-24 box-border z-0">
+            <div class="inline w-60 max-h-full max-w-full   rounded-l-4xl z-0">
+                <div class="ml-10 mt-11 w-fit h-fit ">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="svg-configration stroke-black inline ">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+                    </svg> 
+                    <h1 class=" inline align-middle ml-3">From</h1> 
+                </div>    
+            </div>
+            <div class="inline h-fit w-fit z-10 border rounded-full  mt-11">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="svg-configration stroke-black inline">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
+                </svg>
+            </div>
+            <div class="inline w-60 max-h-full  z-0">
+                <div class="ml-3 mt-11 w-fit h-fit">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="svg-configration stroke-black inline">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+                    </svg>
+                    <h1 class="inline align-middle ml-1">
+                        To
+                    </h1>
+                </div>    
+            </div>
+            <div class="inline w-52 max-h-full border border-slate-300 z-0">
+                <div class="w-fit h-fit mt-11">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="svg-configration stroke-black inline">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+                    </svg>
+                    <h1 class="inline align-middle">Date</h1>
+                      
+                </div>
+            </div>
+            <div class="inline max-h-full bg-red-600 max-w-full width-100 rounded-r-4xl">
+                <div class="w-fit h-fit mt-10 ml-11">
+                    <h1 class="inline font-bold text-white text-xl">SEARCH BUSES</h1>
+                </div>
+            </div>
+
+        </div>    
+    </div> 
+    <div style="position: absolute; transform: translateY(-5%); position: relative;">
+        <div class="offer-wrapper bg-white">
+            <div class="flex flex-row justify-between offer-wrapper-header">
+                <h1 class="text-4xl text-slate-400">TRENDING OFFERS</h1>
+                <button type="button" class="customize-viewall">View All</button>
+            </div>
+            <div>
+                <div class="offer-objects flex flex-row overflow-x-scroll container" id="container" style="height: 250px;">
+                    
+                    <div class=" flex flex-row ml-11 bg-blue-800 offer-div-dimensions rounded-3xl mt-6">
+                        <div class="ml-3.5 mt-auto mb-auto">
+                           <div class="offer-image-dimensions overflow-hidden">
+                            <img src="https://st.redbus.in/images/FIRST/first_26th_sep_2022_ravi/tile-80X80.png" alt="images">>
+    
+                            
+                           </div>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="border-0 rounded  text-white bus-customization mt-2 mb-2" >BUS</h4>
+                        
+                            <h1 class="inline text-white font-bold mt-4">Save up to Rs 250 on
+                                <h1 class="text-white font-bold ">
+                                 bus tickets
+                                </h1>
+                            <h6 class=" text-white text-xs mt-2 mb-2 ">Valid till 30 Nov</h6>
+                            <div class="flex flex-row justify-between w-28">
+                                <h2 class="text-white first-customization inline">FIRST</h2>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="svg-configration inline stroke-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6" />
+                                </svg>
+                            </div>
+                              
+                        </div>
+    
+                        
+                    </div>
+                    <div class=" flex flex-row ml-11 bg-blue-800 offer-div-dimensions rounded-3xl mt-6">
+                        <div class="ml-3.5 mt-auto mb-auto">
+                           <div class="offer-image-dimensions overflow-hidden">
+                            <img src="https://st.redbus.in/images/FIRST/first_26th_sep_2022_ravi/tile-80X80.png" alt="images">>
+    
+                            
+                           </div>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="border-0 rounded  text-white bus-customization mt-2 mb-2" >BUS</h4>
+                        
+                            <h1 class="inline text-white font-bold mt-4">Save up to Rs 250 on
+                                <h1 class="text-white font-bold ">
+                                 bus tickets
+                                </h1>
+                            <h6 class=" text-white text-xs mt-2 mb-2 ">Valid till 30 Nov</h6>
+                            <div class="flex flex-row justify-between w-28">
+                                <h2 class="text-white first-customization inline">FIRST</h2>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="svg-configration inline stroke-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6" />
+                                </svg>
+                            </div>
+                              
+                        </div>    
+                    </div>
+                    <div class=" flex flex-row ml-11 bg-blue-800 offer-div-dimensions rounded-3xl mt-6">
+                        <div class="ml-3.5 mt-auto mb-auto">
+                           <div class="offer-image-dimensions overflow-hidden">
+                            <img src="https://st.redbus.in/images/FIRST/first_26th_sep_2022_ravi/tile-80X80.png" alt="images">>
+    
+                            
+                           </div>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="border-0 rounded  text-white bus-customization mt-2 mb-2" >BUS</h4>
+                        
+                            <h1 class="inline text-white font-bold mt-4">Save up to Rs 250 on
+                                <h1 class="text-white font-bold ">
+                                 bus tickets
+                                </h1>
+                            <h6 class=" text-white text-xs mt-2 mb-2 ">Valid till 30 Nov</h6>
+                            <div class="flex flex-row justify-between w-28">
+                                <h2 class="text-white first-customization inline">FIRST</h2>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="svg-configration inline stroke-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6" />
+                                </svg>
+                            </div>
+                              
+                        </div>
+    
+                        
+                    </div>
+                    <div class=" flex flex-row ml-11 bg-blue-800 offer-div-dimensions rounded-3xl mt-6">
+                        <div class="ml-3.5 mt-auto mb-auto">
+                           <div class="offer-image-dimensions overflow-hidden">
+                            <img src="https://st.redbus.in/images/FIRST/first_26th_sep_2022_ravi/tile-80X80.png" alt="images">>
+    
+                            
+                           </div>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="border-0 rounded  text-white bus-customization mt-2 mb-2" >BUS</h4>
+                        
+                            <h1 class="inline text-white font-bold mt-4">Save up to Rs 250 on
+                                <h1 class="text-white font-bold ">
+                                 bus tickets
+                                </h1>
+                            <h6 class=" text-white text-xs mt-2 mb-2 ">Valid till 30 Nov</h6>
+                            <div class="flex flex-row justify-between w-28">
+                                <h2 class="text-white first-customization inline">FIRST</h2>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="svg-configration inline stroke-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6" />
+                                </svg>
+                            </div>
+                              
+                        </div>
+    
+                        
+                    </div>
+                    <div class=" flex flex-row ml-11 bg-blue-800 offer-div-dimensions rounded-3xl mt-6">
+                        <div class="ml-3.5 mt-auto mb-auto">
+                           <div class="offer-image-dimensions overflow-hidden">
+                            <img src="https://st.redbus.in/images/FIRST/first_26th_sep_2022_ravi/tile-80X80.png" alt="images">>
+    
+                            
+                           </div>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="border-0 rounded  text-white bus-customization mt-2 mb-2" >BUS</h4>
+                        
+                            <h1 class="inline text-white font-bold mt-4">Save up to Rs 250 on
+                                <h1 class="text-white font-bold ">
+                                 bus tickets
+                                </h1>
+                            <h6 class=" text-white text-xs mt-2 mb-2 ">Valid till 30 Nov</h6>
+                            <div class="flex flex-row justify-between w-28">
+                                <h2 class="text-white first-customization inline">FIRST</h2>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="svg-configration inline stroke-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6" />
+                                </svg>
+                            </div>
+                              
+                        </div>
+    
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="border " style="position: relative; height: 300px; width: 100vw;">
+            <img style="margin-left: auto; margin-right: auto; margin-top: 70px;" src="webreferal.jpeg" alt="werbreferal">
+        </div>
+        <div style="width: 100vw; height: 700px;" class="flex flex-row">
+            <div style="width: 50vw; height: 700px;">
+                <div style="height: 250px;">
+                    <p class="pt-20 text-5xl pl-5">
+                        <span class="font-light">NOW,</span><span class="font-bold">GET MORE THAN</span><br>
+                        <span class="font-bold">JUST BUS </span><span class="font-light">TICKETS WITH</span><br>
+                        <span class="font-light">REDBUS!</span>
+                    </p>
+                </div>
+                <div class="flex flex-row ml-10 mt-8 border-bottom">
+                    <div style="width: 50%;" class="flex flex-row cursor-pointer  rounded-xl hover:bg-slate-100 rounded-xl  ">
+                        <img style="display: inline; height: 25px; width: 40px;" class="pt-2 pl-4" src="ryde_vertical.svg" alt="image">
+                        <p class="pl-10 text-red-500 font-semibold text-lg" >
+                            Car/Bus Rental
+                        </p>
+                    </div>
+                    <div style="width: 50%; height: 40px; " class="flex flex-row cursor-pointer hover:bg-slate-100 rounded-xl"> 
+                        <img style="display: inline; height: 25px; width: 40px;" class="pt-2 pl-4" src="rail_vertical.svg" alt="image">
+                        <p class="pl-10 text-red-500 font-semibold text-lg " style="text-align: center;" >Train Tickets</p>
+                    </div>
+
+                </div>
+                <div class="flex flex-column ">
+                    <div class="h-28 pl-14">
+                        <p class="mt-14 text-lg font-light">Rent Cabs, Tempo Travellers & Buses with best drivers</p>
+                    </div>
+                    <div class="h-14 w-96 ml-14 flex flex-row cursor-pointer hover:bg-slate-100 rounded-xl">
+                        <img src="ryde_car.svg" alt="car_image">
+                        <p class="mt-4 ml-4 font-bold">Outstation</p>
+                    </div>
+                    <div class="h-14 w-96 ml-14 flex flex-row cursor-pointer hover:bg-slate-100 rounded-xl">
+                        <img src="ryde_car_hourly.svg" alt="car_hourly">
+                        <p class="mt-4 ml-4 font-bold">Hourly Rental</p>
+                    </div>
+                    <div class="h-14 w-96 ml-14 flex flex-row cursor-pointer hover:bg-slate-100 rounded-xl">
+                        <img class="mt-4" src="ryde_airport_transport.svg" alt="aeroplane">
+                        <p class="mt-4 ml-4 font-bold">Airport Transfers</p>
+                    </div>
+                    
+                </div>
+                <div class="w-72 rounded-xl  ml-14 mt-3 h-12  bg-red-600 flex flex-row cursor-pointer ">
+                    <p class="text-white font-semibold text-xl pt-2 pl-2    ">Book Cab/Bus Rental</p>
+                    <img src="right arrow.png" alt="right_arrow" class="pl-3">
+                </div>
+                
+
+
+            </div>
+            <div style="width: 50vw; height: 700px;">
+                <img src="rydePop.svg" alt="image" class="pt-60">
+
+            </div>
+            
+        </div>
+    </div>
+    <div class="h-418px w-1000px appInstallbg ml-24 border-2 rounded-4xl flex flex-row">
+        <div class="w-4/12">
+            <p class=" pl-6 pt-6 text-4xl font-extralight text-white">ENJOY THE APP!</p>
+            <div class="border-2 h-72 mt-4 ml-6 rounded-2xl bg-white">
+                <div class="mt-12 ml-6">
+                    <div class="flex flex-row">
+                        <img class="inline " src="greentick.svg" alt="green_tick">
+                        <p class="pl-1 text-lg font-extralight">Quick Access</p>
+                    </div>
+                    <div class="mt-3 flex flex-row">
+                        <img class="inline" src="greentick.svg" alt="green_tick">
+                        <p class="pl-1 text-lg font-extralight">Superior Live Tracking</p>
+                    </div>
+                </div>
+                <div class="flex flex-row">
+                    <div class="ml-6 mt-7 border-right w-36"> 
+                        <span>
+                            <p class="inline text-lg font-bold">4.5</p>
+                            <img class="w-5 h-5 inline mb-2" src="star-svgrepo-com.svg" alt="tick">
+                        </span>
+                        <span>
+                            <p class="text-sm font-extralight ">50M+ downloads</p>
+                        </span>
+                        <p class="font-bold mt-1">Play Store</p>
+                    </div>
+                    <div class="ml-6 mt-7">
+                        <span>
+                            <p class="inline text-lg font-bold">4.5</p>
+                            <img class="w-5 h-5 inline mb-2" src="star-svgrepo-com.svg" alt="tick">
+                        </span>
+                        <span>
+                            <p class="text-sm font-extralight ">50M+ downloads</p>
+                        </span>
+                        <p class="font-bold mt-1">Play Store</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="w-8/12 flex flex-column">
+            <div class="pt-20 pl-10">
+                <p class="text-white font-bold text-lg ">Get Download link on</p>
+                <form class="input_form mt-5">
+                    <p class="inline text-gray-400 pt-3 pl-5">+91</p>
+                    <input type="input" name="whatsApp" id="whatsapp_no" placeholder="whatsapp number" class=" pt-3">
+                    <button type="button" class="get_link text-white bg-black">Get link</button>
+                   
+                </form>
+            </div>
+            <div class="flex flex-row">
+                <div class="ml-10 mt-5">
+                    <p class="text-white font-bold text-lg">
+                        Scan to 
+                        <br>
+                        download
+                    </p>
+                    <img src="qrCode.svg" alt="QR Code" class="pt-3" >
+
+                </div>
+                <div class="ml-10 mt-5"> 
+                    <p class="font-bold text-white text-lg">Download the <br>app on</p>
+                    <img src="playStore.svg" alt="playstore" class="pt-5">
+                    <img src="appStore.svg" alt="appstore" >
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+    <div class="w-screen min-h-fit flex flex-column pt-32">
+        <div> 
+            <img src="primoTopBanner.svg" alt="TopBanner" class="mx-auto">
+        </div>
+        <div class="mt-14 ">
+            <div class="flex flex-row ml-56">
+                <div class="flex flex-row primobanner ">
+                    <div class="pt-10 pl-14">
+                        <img src="primoSubImg1 (1).svg" alt="primoSubImg1">
+                    </div>
+                    <div class="pt-6 pl-7">
+                        <p class="font-bold text-white text-2xl">1 of 5 buses <br> qualify</p>
+                        <p class="text-white text-sm mt-3">Primo's strict safety <br>qualification ensures a <br>safer travel for you</p>
+                    </div>
+                </div>
+                <div class="flex flex-row primobanner ml-10 "> 
+                    <div class="pt-10 pl-14">
+                        <img src="primoSubImg1 (1).svg" alt="primoSubImg1">
+                    </div>
+                    <div class="pt-6 pl-7">
+                        <p class="font-bold text-white text-2xl">1 of 5 buses <br> qualify</p>
+                        <p class="text-white text-sm mt-3">Primo's strict safety <br>qualification ensures a <br>safer travel for you</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-10"> 
+                <div class="flex flex-row primobanner mx-auto">
+                    <div class="pt-10 pl-14">
+                        <img src="primoSubImg1 (1).svg" alt="primoSubImg1">
+                    </div>
+                    <div class="pt-6 pl-7">
+                        <p class="font-bold text-white text-2xl">1 of 5 buses <br> qualify</p>
+                        <p class="text-white text-sm mt-3">Primo's strict safety <br>qualification ensures a <br>safer travel for you</p>
+                    </div>
+                </div>
+            </div>    
+        </div>   
+    </div>
+    <div class="flex flex-column">
+        <div class="mt-24">
+            <p class="font-bold text-3xl pl-10">PARTNERED WITH</p>
+        </div>
+        <div class="flex flex-row justify-between mt-10">
+            <h1 class="inline font-extralight text-2xl pl-10">25 RTCs</h1>
+            <button type="button" class=" mr-8 rounded-3xl w-24 border-2 h-10 text-lg font-extralight hover:shadow-2xl">view All</button>
+            
+        </div>
+        <div class="flex flex-row justify-around mt-10"> 
+            <div>
+                <img src="SRTCImage.png.crdownload" alt="srtc">
+                <p class="text-center">APSRTC</p>
+            </div>
+            <div>
+                <img src="SRTCImage.png.crdownload" alt="srtc">
+                <p class="text-center">APSRTC</p>
+            </div>
+            <div>
+                <img src="SRTCImage.png.crdownload" alt="srtc">
+                <p class="text-center">APSRTC</p>
+            </div>
+            <div>
+                <img src="SRTCImage.png.crdownload" alt="srtc">
+                <p class="text-center">APSRTC</p>
+            </div>
+            <div>
+                <img src="SRTCImage.png.crdownload" alt="srtc">
+                <p class="text-center">APSRTC</p>
+            </div>
+            <div>
+                <img src="SRTCImage.png.crdownload" alt="srtc">
+                <p class="text-center">APSRTC</p>
+            </div>
+            <div>
+                <img src="SRTCImage.png.crdownload" alt="srtc">
+                <p class="text-center">APSRTC</p>
+            </div>
+        </div>
+        <div class="flex flex-row justify-between mt-10" >
+            <h1 class="inline font-extralight text-2xl pl-10">3500+ Private Bus Operators</h1>
+            <button type="button" class=" mr-8 rounded-3xl w-24 border-2 h-10 text-lg font-extralight hover:shadow-2xl">view All</button>
+        </div>
+    </div>
+    <div class="flex flex-column">
+        <div class="flex flex-row justify-between mt-10 ml-10 mr-10">
+            <div class="rounded-xl cursor-pointer hover:bg-slate-100 h-10 w-fit"> <p class="font-extralight text-lg pt-1 pl-3 pr-3">SRS Travels</p> </div>
+            <div class="rounded-xl cursor-pointer hover:bg-slate-100 h-10 w-fit"> <p class="font-extralight text-lg pt-1 pl-3 pr-3">Evacay Bus</p> </div>
+            <div class="rounded-xl cursor-pointer hover:bg-slate-100 h-10 w-fit"> <p class="font-extralight text-lg pt-1 pl-3 pr-3">Kallada Travels</p> </div>
+            <div class="rounded-xl cursor-pointer hover:bg-slate-100 h-10 w-fit"> <p class="font-extralight text-lg pt-1 pl-3 pr-3">KPN Travels</p> </div>
+            <div class="rounded-xl cursor-pointer hover:bg-slate-100 h-10 w-fit"> <p class="font-extralight text-lg pt-1 pl-3 pr-3">Orange Travels</p> </div>
+            <div class="rounded-xl cursor-pointer hover:bg-slate-100 h-10 w-fit"> <p class="font-extralight text-lg pt-1 pl-3 pr-3">Parveen Travels</p> </div>
+            <div class="rounded-xl cursor-pointer hover:bg-slate-100 h-10 w-fit"> <p class="font-extralight text-lg pt-1 pl-3 pr-3">Rajdhani Express</p> </div>
+        </div>
+        <div class="flex flex-row justify-between mt-10 ml-10 mr-10">
+            <div class="rounded-xl cursor-pointer hover:bg-slate-100 h-10 w-fit "> <p class="font-extralight text-lg pt-1 pl-3 pr-3">VRL Travels</p></div>
+            <div class="rounded-xl cursor-pointer hover:bg-slate-100 h-10 w-fit"> <p class="font-extralight text-lg pt-1 pl-3 pr-3">VRL Travels</p></div>
+            <div class="rounded-xl cursor-pointer hover:bg-slate-100 h-10 w-fit"> <p class="font-extralight text-lg pt-1 pl-3 pr-3"> Chartered Speed Bus</p></div>
+            <div class="rounded-xl cursor-pointer hover:bg-slate-100 h-10 w-fit"> <p class="font-extralight text-lg pt-1 pl-3 pr-3">Bengal Tiger</p></div>
+            <div class="rounded-xl cursor-pointer hover:bg-slate-100 h-10 w-fit"> <p class="font-extralight text-lg pt-1 pl-3 pr-3">SRM Travels</p></div>
+            <div class="rounded-xl cursor-pointer hover:bg-slate-100 h-10 w-fit"> <p class="font-extralight text-lg pt-1 pl-3 pr-3">Infant Jesus</p></div>
+            <div class="rounded-xl cursor-pointer hover:bg-slate-100 h-10 w-fit"> <p class="font-extralight text-lg pt-1 pl-3 pr-3">Patel Travels</p></div>
+            <div class="rounded-xl cursor-pointer hover:bg-slate-100 h-10 w-fit"> <p class="font-extralight text-lg pt-1 pl-3 pr-3">JBT Travels</p></div>
+        </div>
+        <div class="flex flex-row justify-between mt-10 ml-10 mr-10">
+            <div class="rounded-xl cursor-pointer hover:bg-slate-100 h-10 w-fit"> <p class="font-extralight text-lg pt-1 pl-3 pr-3">Shatabdi Travels</p></div>
+            <div class="rounded-xl cursor-pointer hover:bg-slate-100 h-10 w-fit"> <p class="font-extralight text-lg pt-1 pl-3 pr-3">Eagel Travels</p></div>
+            <div class="rounded-xl cursor-pointer hover:bg-slate-100 h-10 w-fit"> <p class="font-extralight text-lg pt-1 pl-3 pr-3">Kanker Roadways</p></div>
+            <div class="rounded-xl cursor-pointer hover:bg-slate-100 h-10 w-fit"> <p class="font-extralight text-lg pt-1 pl-3 pr-3">Komitla</p></div>
+            <div class="rounded-xl cursor-pointer hover:bg-slate-100 h-10 w-fit"> <p class="font-extralight text-lg pt-1 pl-3 pr-3">Sri Krishna Travels</p></div>
+            <div class="rounded-xl cursor-pointer hover:bg-slate-100 h-10 w-fit"> <p class="font-extralight text-lg pt-1 pl-3 pr-3">Humsafar Travels</p></div>
+            <div class="rounded-xl cursor-pointer hover:bg-slate-100 h-10 w-fit"> <p class="font-extralight text-lg pt-1 pl-3 pr-3">Mahasagar Travels</p></div>
+        </div>
+        <div class="flex flex-row justify-evenly mt-10 ml-10 mr-10">
+            <div class="rounded-xl cursor-pointer hover:bg-slate-100 h-10 w-fit"><p class="font-extralight text-lg pt-1 pl-3 pr-3">Raj Express</p></div>
+            <div class="rounded-xl cursor-pointer hover:bg-slate-100 h-10 w-fit"> <p class="font-extralight text-lg pt-1 pl-3 pr-3"> Sharma Travels </p></div>
+            <div class="rounded-xl cursor-pointer hover:bg-slate-100 h-10 w-fit"> <p class="font-extralight text-lg pt-1 pl-3 pr-3">Shrinath Travels</p></div>
+        </div>
+    </div>
+    <div class="flex flex-column mt-28">
+        <div class="ml-5">
+            <p class="text-4xl font-normal">FREQUENTLY ASKED QUESTIONS</p>
+        </div>
+        <div class="flex flex-row justify-start mt-10 ml-10">
+            <div class="cursor-pointer px-3 py-3 font-light text-xl border-b-2 border-b-red text-red-600">General</div>
+            <div class="cursor-pointer hover:border-b-2 px-3 py-3 font-light text-xl">Ticket-related</div>
+            <div class="cursor-pointer hover:border-b-2 px-3 py-3 font-light text-xl">Payment</div>
+            <div class="cursor-pointer hover:border-b-2 px-3 py-3 font-light text-xl">Cancellation</div>
+            <div class="cursor-pointer hover:border-b-2 px-3 py-3 font-light text-xl">Refund</div>
+            <div class="cursor-pointer hover:border-b-2 px-3 py-3 font-light text-xl">Insurance</div>
+
+        </div>
+        <div class="flex flex-row justify-between border-2 hover:shadow-2xl cursor-pointer mt-5 mx-8 rounded-2xl "> 
+            <p class="font-bold content-center pt-5 pl-3 ">What are the advantages of purchasing a bus ticket with redBus?</p>
+            <p class="text-6xl font-light pr-3 pb-3">+</p>
+        </div>
+        <div class="flex flex-row justify-between border-2 hover:shadow-2xl cursor-pointer mt-5 mx-8 rounded-2xl"> 
+            <p class="font-bold content-center pt-5 pl-3">Do I need to register to use redBus?</p>
+            <p  class="text-6xl font-light pr-3 pb-3">+</p>
+        </div>
+        <div class="flex flex-row justify-between border-2 hover:shadow-2xl cursor-pointer mt-5 mx-8 rounded-2xl"> 
+            <p class="font-bold content-center pt-5 pl-3">Does booking online cost me more?</p>
+            <p class="text-6xl font-light pr-3 pb-3">+</p>
+        </div>
+    </div>
+    <div class="flex flex-column mt-10">
+        <div class="mt-5 ml-10">
+            <p class="text-4xl font-light">GLOBAL PRESENCE</p>
+        </div>
+        <div class="flex flex-row justify-evenly mt-20 cursor-pointer">
+            <div class="text-center">
+                <img src="Colombia.svg" alt="Colombia" >
+                <p class="font-bold pt-3">COLOMBIA</p>
+            </div>
+            <div class="text-center">
+                <img src="India.svg" alt="india">
+                <p class="font-bold pt-3">INDIA</p>
+            </div>
+            <div class="text-center">
+                <img src="Indonesia.svg" alt="indonesia">
+                <p class="font-bold pt-3"> INDONESIA</p>
+            </div>
+            <div class="text-center"> 
+                <img src="Malaysia.svg" alt="malaysia">
+                <p class="font-bold pt-3">MALAYSIA</p>
+            </div>
+            <div class="text-center"> 
+                <img src="Peru.svg" alt="peru">
+                <p class="font-bold pt-3">PERU</p>
+            </div>
+            <div class="text-center"> 
+                <img src="Singapore.svg" alt="singapore">
+                <p class="font-bold pt-3">SINGAPORE</p>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-column">
+        <div class="flex flex-row">
+            <div>
+                <p>Top RTC's</p>
+                <p>APSRTC</p>
+                <p>GSRTC</p>
+                <p>MSRTC</p>
+                <p>TNSTC</p>
+                <p>View All</p>
+            </div>
+            <div>
+                <p>Other</p>
+                <p>TSRTC</p>
+                <p>SBSTC</p>
+                <p>RSRTC</p>
+                <p>Kerala RTC</p>
+                <p> View All</p>
+            </div>
+            <div>
+                <p>Top Bus Routes</p>
+                <p>Hyderabad to Bangalore bus</p>
+                <p>Bangalore to Chennai bus</p>
+                <p>Pune to bangalore bus</p>
+                <p>Mumbai to Bangalore bus</p>
+                <p>View All</p>
+            </div>
+            <div> 
+                <p>Top Cities</p>
+                <p>Hyderabad Bus Tickets</p>
+                <p>Bangalore Bus Tickets</p>
+                <p>Chennai Bus Tickets</p>
+                <p>Pune Bus Tickets</p>
+                <p>View All</p>
+            </div>
+            <div> 
+                <p>Tempo Traveller in Cities</p>
+                <p>Tempo Traveller in Chennai</p>
+                <p>Tempo Traveller in Bangalore</p>
+                <p>Tempo Traveller in Mumbai</p>
+                <p>Tempo Traveller in Pune</p>
+                <p>Tempo Traveller in Hyderabad</p>
+            </div>
+        </div>
+        <div></div>
+        <div></div>
+    </div>
+
+   
+
+    
+  
+</body>
